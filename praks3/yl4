@@ -1,0 +1,20 @@
+#!/bin/bash
+#Bussiekskursiooni script
+#
+echo "Sisesta reisijate arv"
+read reisijad
+echo "Sisesta palju bussis kohti on"
+read bussi_kohad
+#
+bussid=$(($reisijad / $bussi_kohad))
+echo -n "Täielikult täidetud on "
+echo -n $bussid
+echo -n " bussi."
+echo
+#
+echo -n "Maha on jäänud "
+maha_jaanud=$(($reisijad % $bussi_kohad))
+echo -n $maha_jaanud
+echo -n " inimest."
+echo
+#
