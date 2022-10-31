@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Arv paaris või paaritu
+#
+#
+if [ $# != 1 ]
+then
+	echo "Kaivita see skript koos arvuga mille paarsus soovid kontrollida. Näiteks:  ./failinimi 3"
+else
+	jaak=$(($1 % 2))
+	if [ $jaak = 0 ]
+	then
+		echo "Arv on paaris"
+	else
+		echo "Arv on paaritu"
+	fi
+fi
